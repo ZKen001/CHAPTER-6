@@ -11,7 +11,11 @@ const userRoute = () => {
   router.get("/user" , controllerdb.user);
   router.get("/register", controller.registerPage);
   router.post("/register", controller.doregister);
-
+  router.get("/biodata", controller.biodataPage);
+  router.get("/edit", controller.editPage);
+  router.get("/delete",controller.deletePage);
+  router.post("/edit",controller.doEdit);
+  
   const authenticated = router.use(checkAuthenticationMiddleware);
   authenticated.get("/", controller.userPage);
   authenticated.get("/admin", controller.adminPage);

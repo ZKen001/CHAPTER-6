@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDIT</title>
+</head>
+<style>
+    th, td {
+  padding: 5px;
+  text-align: left;  
+}
+ input{
+    margin-top: 5px;
+ }
+ button {
+    margin-left: 50px;
+    margin-top: 15px;
+ }
+</style>
+<body>
+    <h1> EDIT BIODATA USER </h1>
+    <form action="/edit" method ="post">
+    <table style="width:10%">
+        <tr>
+            <th>User ID<input id="username" type="text" name="id" value="<%= dataEdit[0].id %>" /></th>
+        </tr>
+        <tr>
+            <th>Username<input id="username" type="text" name="username" value="<%= dataEdit[0].username %>" /></th>
+        </tr>
+        <tr>
+            <th>Password<input id="password" type="text" name="password" value="<%= dataEdit[0].password %>" /></th>
+        </tr>
+        <tr>
+            <th>City<input id="city" type="text" name="city" value="<%= dataEdit[0].city %>" /></th>
+          </tr>
+          <tr>
+            <th>Gender <r><input id="gender" type="text" name="gender" value="<%= dataEdit[0].gender %>" /></th>
+          </tr>
+           </table>
+           <td id="edit"><button type="submit">Submit</button></td>
+        </form>
+</body>
+</html>
